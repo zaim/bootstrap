@@ -62,9 +62,14 @@ $(DIRS):
 	@mkdir -p $@
 	$(check)
 
-$(ASSET_DIR)/css/%.css: less/%.less 
+$(ASSET_DIR)/css/bootstrap.css: $(wildcard less/*.less)
 	$(print) "  Building CSS" $@
-	$(recess) --compile $< 1>$@ 2>/dev/null
+	$(recess) --compile less/bootstrap.less 1>$@ 2>/dev/null
+	$(check)
+
+$(ASSET_DIR)/css/responsive.css: $(wildcard less/*.less)
+	$(print) "  Building CSS" $@
+	$(recess) --compile less/responsive.less 1>$@ 2>/dev/null
 	$(check)
 
 $(ASSET_DIR)/img/%: img/%
