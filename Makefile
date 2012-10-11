@@ -12,7 +12,7 @@ DIRS         = $(ASSET_DIR)/css $(ASSET_DIR)/img $(ASSET_DIR)/js
 LESS_FILES   = less/bootstrap.less less/responsive.less
 CSS_FILES    = $(patsubst less/%,$(ASSET_DIR)/css/%,$(LESS_FILES:.less=.css))
 IMG_FILES    = $(patsubst img/%,$(ASSET_DIR)/img/%,$(wildcard img/*))
-JS_SRC_FILES = js/*.js
+JS_SRC_FILES = js/bootstrap-transition.js js/bootstrap-alert.js js/bootstrap-button.js js/bootstrap-carousel.js js/bootstrap-collapse.js js/bootstrap-dropdown.js js/bootstrap-modal.js js/bootstrap-tooltip.js js/bootstrap-popover.js js/bootstrap-scrollspy.js js/bootstrap-tab.js js/bootstrap-typeahead.js
 JS_FULL_FILE = $(ASSET_DIR)/js/bootstrap.js
 JS_MIN_FILE  = $(ASSET_DIR)/js/bootstrap.min.js
 JS_HINT_CONF = js/.jshintrc
